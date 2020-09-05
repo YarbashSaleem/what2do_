@@ -1,0 +1,150 @@
+.home_container{
+    background-color:#003333;
+    padding:10vh 0px;
+}
+
+.home{
+    border-radius: 10px;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    margin:0px auto;
+    background-color: teal;
+    height: 80vh;
+    color: white;
+    overflow: scroll;
+    padding:0px 20px;
+}
+.header{
+    display: flex;
+    align-items: center;
+}
+.header >  h1{
+    margin-left: auto;
+}
+.link{
+    color: #003333;
+    margin-left: auto;
+    margin-right: 25px;
+    text-decoration:none;
+    padding:5px;
+    background-color: white;
+    border-radius: 5px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: teal;
+}
+.tasks{
+    position: fixed;
+    background-color: teal;
+    width: 60vw;
+}
+.newTask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newTask >input{
+    color:white;
+    margin:0px 10px;
+    height: 25px;
+    border:none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
+.newTask >input:focus{
+    outline:none;
+    border-bottom: 4px solid white;
+}
+.newTask > button{
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: white;
+}
+.newTask > button:hover{
+    transform: scale(1.1);
+}
+.tasksList > ul{
+    list-style-type: none;
+    padding:120px 0px;
+}
+.task{
+    display: flex;
+    height:30px;
+    padding:10px;
+    margin:10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    border:2px solid white;
+}
+.task > div> p{
+    color: white;
+}
+.strike{
+    text-decoration:line-through;
+}
+.task >div> button{
+    background-color: white;
+    color:#003333;
+    border:none;
+    height: 30px;
+    margin-left: 4px;
+    border-radius: 5px;
+}
+.task > div > button:hover{
+    transform: scale(1.01);
+}
+.search > input{
+    color:white;
+    height: 25px;
+    border:none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
+.search > input:focus{
+    outline:none;
+    border-bottom:4px solid white;
+}
+.popup_new,.popup_edit{
+    width: 50vw;
+    height: 70vh;
+    left: 25vw;
+    top: 20vh;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 1;
+    position: absolute;  
+}
+.popup_header{
+    display: flex;
+    margin: 10px;
+    height: 30px;
+}
+.popup_header > input{
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid teal;
+}
+.popup_header >button{
+    width: 10%;
+    background-color: transparent;
+    border:none;
+}
+.popup_header >input:focus, .description>textarea:focus{
+    outline:none;
+}
+.description > textarea{
+    margin: 10px;
+    resize: none;
+    height: 50vh;
+    width: 97%;
+    border: none;
+    border-left: 2px solid teal;
+    overflow-x: hidden;
+}
