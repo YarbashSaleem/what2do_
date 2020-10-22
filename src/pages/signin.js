@@ -6,6 +6,8 @@ import {useHistory} from 'react-router-dom';
 function SignIn(){
 
     const history = useHistory();
+    const [failed,setFailed] = useState(false);
+    const [err_message,seterr_message] = useState('');
 
     useEffect(() => {
         auth.onAuthStateChanged(user => {
@@ -21,6 +23,8 @@ function SignIn(){
             history.push('/home');
         }).catch(err =>{
             console.log(err)
+            setFailed(true)
+            seterr_message(err.message)
         })
     }
 
@@ -32,6 +36,13 @@ function SignIn(){
             <input type='text' placeholder='Enter your email' value={email} onChange={e => {setEmail(e.currentTarget.value)}}/>
             <input type='password' placeholder='Enter your password' value={password} onChange={e => {setPassword(e.currentTarget.value)}}/>
             <button onClick={signIn}>Sign In</button>
+            {failed?
+                <p>
+                    {err_message}
+                </p>
+                :
+                null
+            }
         </div>
     )
 }
