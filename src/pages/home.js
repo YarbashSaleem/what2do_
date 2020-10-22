@@ -1,11 +1,12 @@
 import React from 'react';  
 import Task from '../components/task';
 import PopupNew from '../components/popup_new'
-import { Link } from 'react-router-dom';
 import PopupEdit from '../components/popup_edit';
+import {auth} from '../firebaseConfig';
+
 class Home extends React.Component{
     constructor(props){
-        super(props);
+        super();
         this.state={
             task:'',
             desc:'',
@@ -18,6 +19,19 @@ class Home extends React.Component{
             viewD:0,
         }
     }
+
+
+    logOut(){
+        auth.signOut().then(res => {
+            const {history} = this.props;
+            history.push('/auth');
+            //do something else with res
+        }).catch(err => {
+            //do something else with err
+            console.log(err)
+        })
+    }
+
     addTask(){
         const tasks=this.state.tasks
         const task=this.state.task
@@ -123,9 +137,9 @@ class Home extends React.Component{
                             <h1>
                                 What2do
                             </h1>
-                            <Link className='link' to='/'>
+                            <button onClick={this.logOut.bind(this)}>
                                 Logout
-                            </Link>
+                            </button>
                         </div>
                         <div className='menu'>
                             <div className='newTask'>

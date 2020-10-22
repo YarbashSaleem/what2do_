@@ -1,0 +1,54 @@
+.auth_container{
+    border: 2px solid teal;
+    width: 60vw;
+    height: 70vh;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.auth_container > div > p{
+    color: #0066CC;
+}
+
+.auth_container > div > p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.signin_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.signin_container > h1{
+    font-size: 32px;
+    color: teal;
+}
+.signin_container > input{
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.signin_container > input:focus{
+    outline: none;
+}
+
+.signin_container > button{
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    background-color:  teal;
+    border: 1px solid teal;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.signin_container > button:hover{
+    transform: scale(1.01);
+}
+
+

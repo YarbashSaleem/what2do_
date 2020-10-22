@@ -22,14 +22,18 @@
 .header >  h1{
     margin-left: auto;
 }
-.link{
+.header > button{
     color: #003333;
     margin-left: auto;
     margin-right: 25px;
     text-decoration:none;
-    padding:5px;
+    padding:8px;
     background-color: white;
     border-radius: 5px;
+}
+.header > button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 .menu{
     display: flex;
@@ -68,6 +72,7 @@
 }
 .newTask > button:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 .tasksList > ul{
     list-style-type: none;
