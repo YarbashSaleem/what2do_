@@ -68,23 +68,13 @@ class Home extends React.Component{
             tasks:newtasks
         })
     }
-    editTaskTitle(e,id){
-        const newTasks=this.state.tasks
-        newTasks.map(i=>{
-            if(id===i.id){
-            i.name=e
-            }
-        })
+    editTaskTitle(name,id){
+        const newTasks=this.state.tasks.map(el=>(id===el.id?{...el,name}:el))
         this.setState({tasks:newTasks})
         console.log(newTasks)
     }
-    editTaskDesc(e,id){
-        const newTasks=this.state.tasks
-        newTasks.map(i=>{
-            if(id===i.id){
-            i.desc=e
-            }
-        })
+    editTaskDesc(desc,id){
+        const newTasks=this.state.tasks.map(i=>(id===i.id?{...i,desc}:i))
         this.setState({tasks:newTasks})
         console.log(newTasks)
     }
@@ -112,11 +102,11 @@ class Home extends React.Component{
         this.toggle_popedit()
     }
     onDone(e){
-        const newTasks=this.state.tasks
-        newTasks.map(i=>{
+        const newTasks=this.state.tasks.map(i=>{
             if(e.id===i.id){
             i.strike=!i.strike
             }
+            return i
         })
         this.setState({tasks:newTasks})
         console.log(newTasks)
