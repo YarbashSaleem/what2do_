@@ -60,5 +60,9 @@
         margin-top: 0px;
         box-sizing: border-box;
     }
+    .auth_container{
+        border-bottom: none;
+        border-top: none;
+    }
   }
 

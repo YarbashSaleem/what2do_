@@ -154,7 +154,7 @@
     overflow-x: hidden;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     .home_container{
         padding: 0px;
         height: 100vh;
@@ -164,28 +164,34 @@
         padding: 0px;
         height: 100vh;
         width: 100%;
-        margin: 0;
+        margin: 0px;
     }
     .tasks{
         width: 100%;
-        padding: 5px;
+        padding: 20px 20px;
     }
     .header > h1{
         margin: 0px;
     }
     .header > button{
         margin-left: auto;
+        margin-right: 40px;
     }
     .menu{
-        padding: 5px;
+        padding: 0px;
     }
     .search{
-        margin-right: 5px;
+        margin-right: 40px;
     }
     .popup_edit,.popup_new{
         width: 100%;
         margin:0px;
         left:0;
     }
+    .description > textarea{
+        margin: 0;
+    }
+    
+    
     
   }
